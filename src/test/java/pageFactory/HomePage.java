@@ -1,5 +1,6 @@
 package pageFactory;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -18,6 +19,8 @@ public class HomePage extends MainClass{
 	WebElement searchBtn;
 	@FindBy(id="icp-nav-flyout")
 	WebElement languageChangeIcon;
+	@FindBy(xpath="//div[@id=\"nav-xshop-container\"]/div")
+	WebElement topMenuNavOptions;
 	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
@@ -41,6 +44,11 @@ public class HomePage extends MainClass{
 	
 	public void clickLanguageChangeOption() {
 		languageChangeIcon.click();
+	}
+	
+	public void clickEachNavOption(String menuNavOptionTxt) {
+		WebElement selectedNavOption = topMenuNavOptions.findElement(By.linkText(menuNavOptionTxt));
+		selectedNavOption.click();	
 	}
 	
 	

@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 //					publish=true,
 					plugin={"pretty","html:target/CucumberReport.html","json:target/JsonReport.json"},
 					monochrome=true,
-					tags="@Release1.0 or @Release2.0"
+					tags="@NewScenario"
 					)
 
 public class RunnerClass {
