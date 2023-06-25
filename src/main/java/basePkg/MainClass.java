@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class MainClass {
-	public static Properties prop;
+	public Properties prop;
 	public static WebDriver driver;
 	
 	public MainClass() {
@@ -29,7 +29,7 @@ public class MainClass {
 	}
 	
 	public void intialization() {		
-		System.setProperty(prop.getProperty("chromeKey"), prop.getProperty("chromePath"));
+//		System.setProperty(prop.getProperty("chromeKey"), prop.getProperty("chromePath"));
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Long.valueOf(prop.
@@ -40,7 +40,7 @@ public class MainClass {
 	}
 	
 	public void tearDown() {
-		driver.quit();
+		driver.quit();	
 	}
 
 }

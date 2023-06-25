@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import basePkg.MainClass;
 
 public class HomePage extends MainClass{
+
 	// Creating page factory:
 		// 1. Create webElement -> @FindBy
 		// 2. Initialize webElement with driver instance -> in constructor
